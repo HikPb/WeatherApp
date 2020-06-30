@@ -56,6 +56,45 @@ function App() {
                 {weather.weather[0].description}
               </div>
             </div>
+            <div className="other-info">
+              <div className="wind">
+                <div className="w-name">
+                  Gió
+                </div>
+                
+                <div className='w-data'>                
+                  {weather.wind.speed} km/h
+                </div>
+              </div>
+
+              <div className="cloud">
+                <div className="c-name">
+                  <label>Mây</label>
+                </div>
+                <div className="c-data">
+                  {weather.clouds.all}
+                </div>
+              </div>
+
+              <div className="pressure">
+                <div className="p-name">
+                  <label>Áp suất</label>
+                </div>
+                <div className="p-data">
+                  {Math.round(weather.main.pressure/1000)} atm   
+                </div>           
+              </div>
+              
+              <div className="humidity">
+                <div className="h-name">
+                  <label>Độ ẩm</label>
+                </div>
+                <div className="h-data">
+                  {Math.round(weather.main.humidity)}%
+                </div>
+                  
+              </div>            
+            </div>
           </div>
         ):('')}
       </main>
